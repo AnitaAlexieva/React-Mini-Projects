@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/header/Header'
+import ToDoTable from './components/to-do-table/ToDoTable'
 
 function App() {
   
@@ -7,9 +8,7 @@ function App() {
     <>
       <Header/>
 
-      <div >
-        
-      </div>
+      <ToDoTable/>
       
     </>
   )

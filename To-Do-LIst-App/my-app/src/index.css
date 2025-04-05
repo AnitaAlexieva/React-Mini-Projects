@@ -2,10 +2,33 @@
 
 body{
     background-image: url(images/task-back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
 }
 .header{
+
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: italic;
+    margin-top: 16%;
+    font-size: 24px;
+}
+table{
+    width: 100%;
+    margin-top: 8%;
+    border: 2px solid rgb(186, 179, 179);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+}
+
+table tr td{
+    border-bottom: 1px solid #b2a5a5;
+    padding: 15px;
     font-size: 20px;
+}
+
+table tr:last-child td {
+    border-bottom: none;
 }

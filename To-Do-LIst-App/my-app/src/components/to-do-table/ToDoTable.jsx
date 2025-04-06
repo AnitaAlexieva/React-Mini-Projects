@@ -1,5 +1,6 @@
 export default function ToDoTable() {
     return(
+      <>
         <div className='to-do-table'>
         <table>
           <tbody>
@@ -21,5 +22,6 @@ export default function ToDoTable() {
           </tbody>
         </table>
       </div>
+      </>
     )
 }

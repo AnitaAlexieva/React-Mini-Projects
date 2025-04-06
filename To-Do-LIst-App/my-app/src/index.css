@@ -32,3 +32,28 @@ table tr td{
 table tr:last-child td {
     border-bottom: none;
 }
+
+.create-form{
+    margin: 40px;
+    padding: 10px;
+    background: #b1b1aa;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.create-input{
+    height: 70px;
+    width: 300px;
+}
+
+.add-btn{
+    width: 100px;
+}

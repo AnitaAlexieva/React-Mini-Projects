@@ -12,7 +12,7 @@ body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: italic;
-    margin-top: 16%;
+    margin-top: 14%;
     font-size: 24px;
 }
 table{
@@ -35,10 +35,13 @@ table tr:last-child td {
 
 .create-form{
     margin: 40px;
-    padding: 10px;
+    padding: 20px;
+    width: 370px;
     background: #b1b1aa;
-    display: flex;
-    justify-content: center;
+    display: inline-table;
+    border-radius: 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 form{
@@ -51,9 +54,23 @@ form{
 
 .create-input{
     height: 70px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
     width: 300px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
 }
 
 .add-btn{
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    border-radius: 10px;
     width: 100px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    color: rgb(74, 74, 74);
 }

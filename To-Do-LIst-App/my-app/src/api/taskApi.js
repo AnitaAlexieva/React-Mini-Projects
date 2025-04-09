@@ -1,6 +1,6 @@
 import { request } from "../requester";
 
-const baseUrl = 'https://localhost:3030/data/tasks';
+const baseUrl = 'http://localhost:3030/jsonstore/tasks';
 
 
     export const useCreateTask = () =>{

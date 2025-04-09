@@ -7,14 +7,20 @@ export default function CreateTask() {
 
     const createHadnler = async(formData) =>{
         const data = Object.fromEntries(formData);
-        const task = await create(data);
-        console.log(task);
+
+        try{
+            const task = await create(data);
+            console.log(task);
+        }catch(error){
+            console.log(error); 
+        }
+        
     }
     return (
         <div className='create-form'>
-            <form>
+            <form action={createHadnler}>
                 <input className="create-input" type="text" name='newTask' placeholder=' I have to...'></input>
-                <button className="add-btn" type='submit' onSubmit={createHadnler}>Add Task</button>
+                <button className="add-btn" type='submit'>Add Task</button>
             </form>
         </div>
     )

@@ -1,14 +1,14 @@
 
-export async function request(baseUrl, method, data){
+export async function request(baseUrl, method, data ={}){
     if(method !== "GET"){
         const response = await fetch(baseUrl, {
             method,
             headers:{
-                "Content-Type":"application/json"
+                'Content-Type':'application/json'
             },
             body: JSON.stringify(data),
         })
-        const result = response.json();
+        const result =await response.json();
         return result;
     }
     
@@ -19,6 +19,6 @@ export async function request(baseUrl, method, data){
         }
     })
 
-    const result= response.json();
+    const result=await response.json();
     return result;
 }

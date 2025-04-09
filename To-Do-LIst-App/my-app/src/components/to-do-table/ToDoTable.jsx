@@ -24,8 +24,8 @@ export default function ToDoTable() {
             {showTasks.map((task) => (
               <tr key={task.id}>
                 <td>{task.newTask}</td>
-                <td>Yes</td>
-                <td>No</td>
+                <td><button><i className="fa-solid fa-check"></i></button></td>
+                <td><button><i className="fa-solid fa-xmark"></i></button></td>
               </tr>
             ))}
           </tbody>

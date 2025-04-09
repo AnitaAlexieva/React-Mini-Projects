@@ -27,10 +27,14 @@ table tr td{
     border-bottom: 1px solid #b2a5a5;
     padding: 15px;
     font-size: 20px;
+    text-align: start;
 }
 
 table tr:last-child td {
     border-bottom: none;
+}
+button{
+    border: none;
 }
 
 .create-form{

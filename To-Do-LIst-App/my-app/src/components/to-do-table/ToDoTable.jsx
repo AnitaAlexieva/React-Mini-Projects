@@ -1,19 +1,27 @@
 import { useEffect, useState } from "react";
 import { useAllTasks } from "../../api/taskApi"
+import CreateTask from "../create-task/CreateTask";
 
 export default function ToDoTable() {
 
-  const {allTasks} = useAllTasks();
+  const allTasks = useAllTasks();
+  const [showTasks, setShowTasks] = useState(allTasks);
+
 
   useEffect(() =>{
-      console.log(allTasks)
+      setShowTasks(allTasks)
   },[allTasks])
+
+
+  const createShowTask = (newTask) =>{
+    setShowTasks(state => [...state, newTask])
+  }
     return(
       <>
         <div className='to-do-table'>
         <table>
           <tbody>
-            {allTasks.map((task) => (
+            {showTasks.map((task) => (
               <tr key={task.id}>
                 <td>{task.newTask}</td>
                 <td>Yes</td>
@@ -23,6 +31,8 @@ export default function ToDoTable() {
           </tbody>
         </table>
       </div>
+
+      <CreateTask onCreate={createShowTask}/>
       </>
     )
 }

@@ -1,7 +1,9 @@
 import { useCreateTask } from "../../api/taskApi";
 
 
-export default function CreateTask() {
+export default function CreateTask({
+    onCreate
+}) {
 
     const {create} = useCreateTask();
 
@@ -11,6 +13,7 @@ export default function CreateTask() {
         try{
             const task = await create(data);
             console.log(task);
+            onCreate(task)
         }catch(error){
             console.log(error); 
         }

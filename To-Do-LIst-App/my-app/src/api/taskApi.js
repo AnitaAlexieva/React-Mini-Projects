@@ -23,7 +23,7 @@ const baseUrl = 'http://localhost:3030/jsonstore/tasks';
             getAll();
         },[])
        
-        return {allTasks};
+        return allTasks;
     }
 
 

@@ -26,4 +26,10 @@ const baseUrl = 'http://localhost:3030/jsonstore/tasks';
         return allTasks;
     }
 
+    export const deleteTask = () =>{
+        const delTask = async (taskId) =>{
+            await request(`${baseUrl}/${taskId}`, "DELETE");
+        }
+        return{delTask};
+    }
 

@@ -79,3 +79,7 @@ form{
     border: none;
     color: rgb(74, 74, 74);
 }
+.crossTask {
+    text-decoration: line-through;
+    color: gray;
+  }

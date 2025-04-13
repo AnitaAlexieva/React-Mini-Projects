@@ -1,5 +1,14 @@
 body{
+  display: flex;
+  justify-content: center;
   background-image: url('/images/weather.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.weather-serach{
+  margin: 50px;
+  padding: 20px;
+  background: white;
+  border-radius: 50px;
 }

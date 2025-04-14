@@ -12,3 +12,23 @@ body{
   background: white;
   border-radius: 50px;
 }
+
+.search-input{
+  font-size: 18px;
+}
+
+.search-btn{
+  font-size: 18px;
+}
+.weather-card{
+    background: antiquewhite;
+    padding: 20px;
+    border-radius: 20px;
+}
+.weather-info{
+    justify-content: space-between;
+    display: flex;
+}
+.weather-h3{
+  text-align: center;
+}

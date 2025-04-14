@@ -1,4 +1,5 @@
 import Search from "./components/Search"
+import WeatherCard from "./components/WeatherCard"
 
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
     <>
 
         <Search/>
+
+        <WeatherCard/>
     </>
   )
 }

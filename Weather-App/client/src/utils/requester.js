@@ -1,27 +1,17 @@
 export async function requester (url, method, data = {}){
-    if(!data){
-        const response = await fetch(url, {
-            method:method,
-            headers:{
-                "Content-Type":"applicatoin/json"
-            }
-            
-        })
-
-        const result = await response.json();
-        return result;
-
+    const options = {
+        method:method,
+        headers:{
+            "Content-Type":"application/json"
+        }
+        
     }
-    if(data){
-        const response = await fetch(url, {
-            method:method,
-            headers:{
-                "Content-Type":"application/json",
-            },
-            data: JSON.stringify(data)
-        })
-        const result = await response.json();
-        return result;
+    
+    if(data && method !== 'GET'){
+        options.body = JSON.stringify(data)
     }
-
+    
+    const response = await fetch(url, options)
+    const result = await response.json();
+    return result;
 }

@@ -44,8 +44,12 @@ export default function WeatherCard() {
                             <p>Wind speed: {weather.wind.speed} km/h</p>
                         </div>
                         <div className="weather-icon">
-                            <p>{weather.weather[0].icon}</p>
+                            <img
+                                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                                alt="Weather icon"
+                            />
                         </div>
+
                     </div>
                 </div>
             ) : (

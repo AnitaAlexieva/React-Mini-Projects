@@ -29,6 +29,14 @@ export default function WeatherCard() {
         return <p>Loading weather...</p>;
     }
    
+    const ChangeBackground = (temp) =>{
+        if(temp <= 0) return 'bg-freezing'
+        if(temp <=10) return 'bg-cold'
+        if(temp <= 18) return 'bg-mild'
+        if(temp <=25) return 'bg-warm'
+        if(temp <= 35) return 'bg-hot';
+        return 'bg-very-hot'
+    }
 
     return (
         <>
@@ -38,7 +46,7 @@ export default function WeatherCard() {
             </form>
 
             {!isClicked ? (
-                <div className="weather-card">
+                <div className={`weather-card ${ChangeBackground(weather.main.temp)}`}>
                     <h3 className="weather-h3">Weather in {city}</h3>
                     <div className="weather-info">
                         <div className="weather-text">

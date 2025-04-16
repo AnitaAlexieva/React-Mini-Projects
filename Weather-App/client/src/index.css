@@ -36,11 +36,26 @@ body{
 .more-btn{
   padding: 5px 10px;
   font-size: 15px;
-  background: bisque;
-  border: 1px solid burlywood;
+  background: rgb(255, 245, 233);
+  border: 1px solid rgb(201, 192, 181);
   border-radius: 10px;
 }
 .btn-container{
   text-align: center;
   padding: 10px;
+}
+.bg-freezing{
+  background-color: rgb(213, 223, 233);
+}
+.bg-cold{
+  background-color: rgb(170, 170, 247);
+}
+.bg-mild{
+  background-color: beige;
+}
+.bg-warm{
+  background-color: bisque;
+}
+.bg-hot{
+  background-color: rgb(247, 172, 80);
 }

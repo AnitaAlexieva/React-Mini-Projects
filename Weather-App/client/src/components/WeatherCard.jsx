@@ -40,17 +40,19 @@ export default function WeatherCard() {
 
     return (
         <>
+        <div className={`app-wrapper ${ChangeBackground(weather.main.temp)}`}>
+            
             <form className="weather-serach" onSubmit={WeatherHandler}>
                 <input className="search-input" type="text" name="search" placeholder="My location is..." />
                 <button className="search-btn" type="submit">Search</button>
             </form>
 
             {!isClicked ? (
-                <div className={`weather-card ${ChangeBackground(weather.main.temp)}`}>
-                    <h3 className="weather-h3">Weather in {city}</h3>
+                <div className="weather-card">
                     <div className="weather-info">
                         <div className="weather-text">
-                            <p>Tempreture: {weather.main.temp} °C</p>
+                        <h3 className="weather-h3">Weather in {city}</h3>
+                            
                             <p>Weather description: {weather.weather[0].description}</p>
                             <p>Wind speed: {weather.wind.speed} km/h</p>
                         </div>
@@ -59,6 +61,7 @@ export default function WeatherCard() {
                                 src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                                 alt="Weather icon"
                             />
+                            <p className="temp">{weather.main.temp} °C</p>
                         </div>
 
                     </div>
@@ -68,13 +71,12 @@ export default function WeatherCard() {
                 </div>
             ) : (
                 <div className="weather-card">
-                    <h3 className="weather-h3">Weather in {city}</h3>
                     <div className="weather-info">
                         <div className="weather-text">
-                            <p>Tempreture: {weather.main.temp} °C</p>
+                            <h3 className="weather-h3">Weather in {city}</h3>
                             <p>Feels like: {weather.main.feels_like} °C</p>
-                            <p>Min tempreture: {weather.main.temp_min}</p>
                             <p>Max tempreture: {weather.main.temp_max}</p>
+                            <p>Min tempreture: {weather.main.temp_min}</p>
                             <p>Clouds: {weather.clouds.all}</p>
                             <p>Weather description: {weather.weather[0].description}</p>
                             <p>Wind speed: {weather.wind.speed} km/h</p>
@@ -83,7 +85,8 @@ export default function WeatherCard() {
                             <img
                                 src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                                 alt="Weather icon"
-                            />
+                                />
+                            <p className="temp">{weather.main.temp} °C</p>
                         </div>
 
                     </div>
@@ -92,6 +95,7 @@ export default function WeatherCard() {
                     </div>
                 </div>
             )}
+        </div>
 
         </>
     )

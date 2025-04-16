@@ -1,7 +1,15 @@
 body{
+  margin: 0;
+  padding: 0;
+}
+
+.app-wrapper {
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  background-image: url('/images/weather.jpg');
+  padding: 50px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -11,6 +19,8 @@ body{
   padding: 20px;
   background: white;
   border-radius: 50px;
+  background:rgb(255 242 242 / 40%); 
+  backdrop-filter: blur(5px); 
 }
 
 .search-input{
@@ -21,9 +31,10 @@ body{
   font-size: 18px;
 }
 .weather-card{
-    background: antiquewhite;
     padding: 20px;
     border-radius: 20px;
+    background: rgb(255 242 242 / 40%); 
+    backdrop-filter: blur(5px); 
 }
 .weather-info{
     justify-content: space-between;
@@ -31,6 +42,15 @@ body{
 }
 .weather-h3{
   text-align: center;
+}
+.temp{
+  text-align: center;
+  margin: 0;
+}
+.weather-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .more-btn{
@@ -43,19 +63,24 @@ body{
 .btn-container{
   text-align: center;
   padding: 10px;
+  margin: 20px 0 0;
+
 }
 .bg-freezing{
-  background-color: rgb(213, 223, 233);
+  background-image: url('/images/freezing.jpg');
 }
 .bg-cold{
-  background-color: rgb(170, 170, 247);
+  background-image: url('/images/coldd.jpeg');
 }
 .bg-mild{
-  background-color: beige;
+  background-image: url('/images/mild.jpg');
 }
 .bg-warm{
-  background-color: bisque;
+  background-image: url('/images/warm.jpg');
 }
 .bg-hot{
-  background-color: rgb(247, 172, 80);
+  background-image: url('/images/hot.jpg');
+}
+.bg-very-hot{
+  background-image: url('/images/very-hot.jpg');
 }

@@ -32,3 +32,15 @@ body{
 .weather-h3{
   text-align: center;
 }
+
+.more-btn{
+  padding: 5px 10px;
+  font-size: 15px;
+  background: bisque;
+  border: 1px solid burlywood;
+  border-radius: 10px;
+}
+.btn-container{
+  text-align: center;
+  padding: 10px;
+}

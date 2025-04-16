@@ -51,6 +51,9 @@ export default function WeatherCard() {
                         </div>
 
                     </div>
+                    <div className="btn-container">
+                        <button className="more-btn">Read More</button>
+                    </div>
                 </div>
             ) : (
                 <p>Loading weather...</p>
